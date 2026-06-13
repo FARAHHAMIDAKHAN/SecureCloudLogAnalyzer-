@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+</head>
+<body>
+
+<h2>Analysis Result</h2>
+
+{% for key, value in results.items() %}
+    <p><b>{{ key }}</b> : {{ value }}</p>
+{% endfor %}
+
+<br>
+<a href="/upload">Back</a>
+<br>
+<a href="/logout">Logout</a>
+
+</body>
+</html>
