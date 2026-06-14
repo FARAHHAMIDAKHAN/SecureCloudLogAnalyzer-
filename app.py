@@ -1,13 +1,21 @@
 from flask import Flask, render_template, request, redirect, url_for, session
-
+from flask_sqlalchemy import SQLAlchemy
+import os
+from dotenv import load_dotenv
+load_dotenv()
 app = Flask(__name__)
-app.secret_key = "secret123"
+app.secret_key = os.getenv("SECRET_KEY")
+app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv("DATABASE_URL")
+app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
+db = SQLAlchemy(app)
 # simple fake user (teacher ke liye enough)
 USER = {
     "admin": "admin123"
 }
-
+class AnalysisResult(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    result = db.Column(db.Text)
 @app.route("/")
 def home():
     if "user" in session:
@@ -73,10 +81,16 @@ def upload():
 
         results = run_mapreduce(content)
 
+        saved = AnalysisResult(
+            result=str(results)
+        )
+
+        db.session.add(saved)
+        db.session.commit()
+
         return redirect(url_for("dashboard"))
 
     return render_template("upload.html")
-
 # DASHBOARD
 @app.route("/dashboard")
 def dashboard():
