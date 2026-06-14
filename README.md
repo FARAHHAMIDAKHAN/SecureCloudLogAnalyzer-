@@ -11,6 +11,7 @@ As modern organizations generate large volumes of system and application logs, e
 
 **Secure Cloud Log Analyzer**  
 2023-ag-9526
+
 FARAH HAMIDA KHAN
 ---
 
