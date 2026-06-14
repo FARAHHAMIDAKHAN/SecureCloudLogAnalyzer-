@@ -6,6 +6,12 @@ Secure Cloud Log Analyzer is a Cloud Computing project developed to provide a se
 
 As modern organizations generate large volumes of system and application logs, effective monitoring becomes essential. This project demonstrates how cloud technologies can be utilized to manage and analyze log data efficiently while ensuring accessibility, scalability, and reliability.
 
+
+## 👨‍💻 Developer
+
+**Secure Cloud Log Analyzer**  
+FARAH HAMIDA KHAN 
+2023-sg-9526
 ---
 
 ## ✨ Key Features
@@ -75,54 +81,6 @@ The deployment showcases:
 - Continuous availability
 - Remote accessibility
 - Practical cloud infrastructure utilization
-
----
-
-## 🎯 Learning Outcomes
-
-This project provided practical experience in:
-
-- Cloud Computing concepts
-- Cloud application deployment
-- Flask web development
-- Log management systems
-- Git and GitHub workflows
-- Software deployment practices
-- Web application architecture
-
----
-
-## 🏗️ Project Architecture
-
-```text
-User Interface
-       │
-       ▼
-Flask Web Application
-       │
-       ▼
-Log Processing Module
-       │
-       ▼
-Analysis & Monitoring
-       │
-       ▼
-Cloud Deployment Environment
-```
-
----
-
-## 📚 Academic Purpose
-
-This project was developed as a Cloud Computing academic project to demonstrate the practical implementation of cloud technologies, web application development, and centralized log analysis systems.
-
----
-
-## 👨‍💻 Developer
-
-**Secure Cloud Log Analyzer**  
-Cloud Computing Project
-
 ---
 
 ### ⭐ Project Goal
